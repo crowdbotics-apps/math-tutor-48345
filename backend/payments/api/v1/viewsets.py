@@ -1,5 +1,5 @@
 from rest_framework import authentication
-from payments.models import Payment, Donation
+from payments.models import Donation, Payment
 from .serializers import DonationSerializer, PaymentSerializer
 from rest_framework import viewsets
 

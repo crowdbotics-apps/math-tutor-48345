@@ -6,9 +6,9 @@ class Material(models.Model):
     "Generated Model"
     subject = models.ForeignKey(
         "tutoring.Subject",
-        on_delete=models.CASCADE,
         null=False,
         blank=False,
+        on_delete=models.CASCADE,
         related_name="material_subject",
     )
     title = models.CharField(
@@ -25,23 +25,23 @@ class Session(models.Model):
     "Generated Model"
     teacher = models.ForeignKey(
         "users.User",
-        on_delete=models.CASCADE,
         null=False,
         blank=False,
+        on_delete=models.CASCADE,
         related_name="session_teacher",
     )
     student = models.ForeignKey(
         "users.User",
-        on_delete=models.CASCADE,
         null=False,
         blank=False,
+        on_delete=models.CASCADE,
         related_name="session_student",
     )
     subject = models.ForeignKey(
         "tutoring.Subject",
-        on_delete=models.CASCADE,
         null=False,
         blank=False,
+        on_delete=models.CASCADE,
         related_name="session_subject",
     )
     scheduled_time = models.DateTimeField(

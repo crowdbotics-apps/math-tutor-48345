@@ -24,9 +24,9 @@ class User(AbstractUser):
         max_length=255,
     )
     role = models.CharField(
-        max_length=50,
-        blank=True,
         null=True,
+        blank=True,
+        max_length=50,
     )
     email = models.EmailField(
         null=True,
@@ -34,9 +34,9 @@ class User(AbstractUser):
         max_length=255,
     )
     password = models.CharField(
-        max_length=255,
-        blank=True,
         null=True,
+        blank=True,
+        max_length=255,
     )
 
     def get_absolute_url(self):
